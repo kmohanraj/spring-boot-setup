@@ -47,11 +47,38 @@ THEN Configure plugins
 ![Screenshot](plugins.png)
 
 
-THEN Search plugins and install 
+THEN Search plugins and install, Enable
 
 Ex, Spring Assistant
 
 ![Screenshot](install-plugin.png)
+
+
+##### Create a new Spring App
+
+CLICK New Project
+
+![Screenshot](create.png)
+
+
+THEN Select `Spring Assistant`
+
+![Screenshot](spring-assistant.png)
+
+THEN Configure project type and Project name
+
+![Screenshot](configure.project.png)
+
+
+THEN Select `Lambok`
+
+![Screenshot](lambok.png)
+
+THEN Confirm Project and Finish
+
+![Screenshoy](finish.png)
+
+
 
 
 
