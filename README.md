@@ -6,26 +6,37 @@
 
 ```
 brew cask install intellij-idea-ce
-
 ```
 
 ##### IntelliJ Ultimate Edition
 
 ```
 brew cask install intellij-idea
-
 ```
 
 #### 2. Install Spring Boot
 
 ```
 brew tap spring-io/tap
-
 ```
 
 ```
 brew install spring-boot
+```
 
+#### 3. Install OpenJdk
+
+```
+asdf plugin-add java
+asdf install java adoptopenjdk$OPEN_JDK_VERSION
+asdf global java adoptopenjdk$OPEN_JDK_VERSION
+. ~/.asdf/plugins/java/set-java-home.zsh
+```
+
+#### 4.Install Maven
+
+```
+brew install maven 
 ```
 
 Note: if you got error like,
@@ -77,10 +88,4 @@ THEN Select `Lambok`
 THEN Confirm Project and Finish
 
 ![Screenshoy](finish.png)
-
-
-
-
-
-
 

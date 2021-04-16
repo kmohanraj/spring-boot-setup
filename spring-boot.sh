@@ -1,5 +1,6 @@
 RED='\033[0;31m'
 DG='\033[0;31m'
+OPEN_JDK_VERSION=-8.0.272+10
 
 unameOut="$(uname -s)"
 case "${unameOut}" in
@@ -22,6 +23,23 @@ if [ "$machine" = "Mac" ] ; then
   echo "===================================================="
   echo "${green} Spring Boot Installation Complete ${reset} "
   echo "===================================================="
+  # brew install homebrew/cask-versions/adoptopenjdk8 --cask
+  asdf plugin-add java
+  asdf install java adoptopenjdk$OPEN_JDK_VERSION
+  asdf global java adoptopenjdk$OPEN_JDK_VERSION
+
+  . ~/.asdf/plugins/java/set-java-home.zsh
+  
+  echo "=================================================================================="
+  echo " ${green} OpenJdk Installation Complete  and Version ${OPEN_JDK_VERSION} ${reset} "
+  echo "=================================================================================="
+
+  brew install maven 
+  echo "==============================================="
+  echo " ${green} Maven Installation Complete ${reset} "
+  echo "==============================================="
+
+
 else
   echo "NOT MAC===="
 fi
