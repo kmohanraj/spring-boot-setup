@@ -1,6 +1,7 @@
 RED='\033[0;31m'
 DG='\033[0;31m'
 OPEN_JDK_VERSION=-11.0.15+10
+MAVEN_VERSION=3.6.3
 
 unameOut="$(uname -s)"
 case "${unameOut}" in
@@ -33,17 +34,18 @@ if [ "$machine" = "Mac" ] ; then
   # asdf install java adoptopenjdk$OPEN_JDK_VERSION
   # asdf global java adoptopenjdk$OPEN_JDK_VERSION
 
-  . ~/.asdf/plugins/java/set-java-home.zsh
-  
+  . ~/.asdf/plugins/java/set-java-home.zsh 
   echo "=================================================================================="
   echo " ${green} OpenJdk Installation Complete  and Version ${OPEN_JDK_VERSION} ${reset} "
   echo "=================================================================================="
 
-  brew install maven 
+  # brew install maven
+  asdf plugin-add maven
+  asdf install maven $MAVEN_VERSION
+  asdf global maven $MAVEN_VERSION
   echo "==============================================="
-  echo " ${green} Maven Installation Complete ${reset} "
+  echo " ${green} Maven Installation Complete and version ${MAVEN_VERSION} ${reset} "
   echo "==============================================="
-
 
 else
   echo "NOT MAC===="
