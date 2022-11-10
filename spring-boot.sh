@@ -26,10 +26,10 @@ if [ "$machine" = "Mac" ] ; then
   # brew install homebrew/cask-versions/adoptopenjdk8 --cask
   # asdf plugin-add java
   asdf plugin-add java https://github.com/halcyon/asdf-java.git
-  asdf install java adoptopenjdk$OPEN_JDK_VERSION -> working
-  asdf global java adoptopenjdk$OPEN_JDK_VERSION -> working
-  . ~/.asdf/plugins/java/set-java-home.bash -> working
-  . ~/.asdf/plugins/java/set-java-home.zsh -> working   
+  asdf install java adoptopenjdk$OPEN_JDK_VERSION
+  asdf global java adoptopenjdk$OPEN_JDK_VERSION
+  . ~/.asdf/plugins/java/set-java-home.bash
+  . ~/.asdf/plugins/java/set-java-home.zsh  
   # asdf install java adoptopenjdk$OPEN_JDK_VERSION
   # asdf global java adoptopenjdk$OPEN_JDK_VERSION
 
